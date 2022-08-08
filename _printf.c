@@ -27,9 +27,9 @@ static int (*check_for_specifiers(const char *format))(va_list)
 		{NULL, NULL}
 	};
 
-	for (i = 0; p[i].c != NULL; i++)
+	for (i = 0; p[i].ch != NULL; i++)
 	{
-		if (*(p[i].c) == *format)
+		if (*(p[i].ch) == *format)
 		{
 			break;
 		}
