@@ -61,7 +61,6 @@ int (*cmp_func(const char a))(va_list)
 		{'s', print_string},
 		{'d', print_n},
 		{'i', print_n},
-		{'b', print_binary},
 		{'\0', NULL}
 	};
 
