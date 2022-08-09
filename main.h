@@ -1,15 +1,15 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
 
 #include <stdarg.h>
 /**
  * struct print - structure for printing various types
- * @ch: type to print
+ * @t: type to print
  * @f: function to print
  */
 typedef struct print
 {
-	char *ch;
+	char *t;
 	int (*f)(va_list);
 } print_t;
 
