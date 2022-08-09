@@ -95,10 +95,10 @@ int print_n(va_list n)
 }
 
 /**
- * print_n - Entry point. Print number
+ * print_to_binary - Print number in to binary number
  * @n: Variable va_list
  *
- * Return: count (nbytes)
+ * Return: count of bytes printed
  */
 int print_to_binary(va_list n)
 {
