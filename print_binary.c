@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_to_binary - Print number in to binary number
+ * print_binary - Print number in to binary number
  * @n: Variable va_list
  *
  * Return: count of bytes printed
