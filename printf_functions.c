@@ -103,20 +103,25 @@ int print_n(va_list n)
 int print_to_binary(va_list n)
 {
 	long int number;
-	int counter = 0, tmp;
+	int counter = 0, index = 0, i;
+	char *tmp = malloc(sizeof(char) * 32);
 
 	number = va_arg(n, int);
-	if (number <= 0)
-		return (-1);
+	if (number < 0)
+		number *= -1;
 
 	while (number >= 0)
 	{
-		tmp = number % 2;
-		_putchar(tmp + 48);
+		tmp[index++] = number % 2;
 		number /= 2;
-		counter++;
 		if (number == 0)
 			break;
+	}
+
+	for (i = index - 1; i >= 0; i--)
+	{
+		_putchar(tmp[i] + 48);
+		counter++;
 	}
 
 	return(counter);
