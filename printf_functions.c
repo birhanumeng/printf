@@ -106,8 +106,8 @@ int print_to_binary(va_list n)
 	int counter = 0, tmp;
 
 	number = va_arg(n, int);
-	if (number < 0)
-		number *= -1;
+	if (number <= 0)
+		return (-1);
 
 	while (number >= 0)
 	{
