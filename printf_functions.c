@@ -123,6 +123,7 @@ int print_to_binary(va_list n)
 		_putchar(tmp[i] + 48);
 		counter++;
 	}
+	free(tmp);
 
 	return(counter);
 }
