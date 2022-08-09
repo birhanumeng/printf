@@ -93,3 +93,31 @@ int print_n(va_list n)
 	}
 	return (counter);
 }
+
+/**
+ * print_n - Entry point. Print number
+ * @n: Variable va_list
+ *
+ * Return: count (nbytes)
+ */
+int print_to_binary(va_list n)
+{
+	long int number;
+	int counter = 0, tmp;
+
+	number = va_arg(n, int);
+	if (number < 0)
+		number *= -1;
+
+	while (number >= 0)
+	{
+		tmp = number % 2;
+		_putchar(tmp + 48);
+		number /= 2;
+		counter++;
+		if (number == 0)
+			break;
+	}
+
+	return(counter);
+}
